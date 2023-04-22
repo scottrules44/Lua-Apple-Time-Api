@@ -1,0 +1,52 @@
+settings =
+{
+  splashScreen =
+	{
+    enable = false
+  },
+
+	orientation =
+	{
+		-- Supported values for orientation:
+		-- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+		default = "landscapeLeft",
+		supported = { "landscapeLeft", }
+	},
+
+	--
+	-- Android section
+	--
+	android =
+	{
+      minSdkVersion = "21",
+
+      versionCode = "12",
+
+      usesPermissions =
+      {
+        "com.android.vending.CHECK_LICENSE",
+        "android.permission.INTERNET",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+      },
+
+      useGoogleServicesJson = true,
+
+	},
+
+	-- Plugins section
+
+	plugins =
+	{
+	},
+
+	--
+	-- Project section
+	--
+	excludeFiles =
+	{
+      -- Exclude unnecessary files for each platform
+      all = { "Icon.png", "Icon*.ico", "Icon*.icns", "no_incluir", "Thumbs.db" },
+      ios = { "Icon-*dpi.png", "Icon*.png", "AndroidResources" },
+      android = { "*.lproj", "LaunchScreen.storyboardc", "Images.xcassets" },
+	},
+}
